@@ -5,6 +5,11 @@ body {
    height: 100%;
    background: #39B54A;
 }
+div, img {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
 h1 {
    font-family: 'Carter One', cursive;
    font-size: 5em;
@@ -12,23 +17,50 @@ h1 {
    text-align: center;
    margin: 0em 0.5em 0.3em 0.5em;
 }
-a {
+p {
+   font-family: 'Open Sans', sans-serif;
+   font-size: 1.3em;
+   color: #F7F8DE;
+}
+.container-4{
+   float: left;
+   width: 25%;
+}
+.email{
+   font-weight: bold;
+   color: #C2C5B7;
+}
+.email:hover{
+   color: #7A7C79;
+}
+.home-link-centre{
+   text-align: center;
+}
+.home-link-left{
+   text-align: left;
+}
+.home-link-right{
+   text-align: right;
+}
+.link {
 	font-family: 'Open Sans', sans-serif;
    font-size: 1.8em;
 	color: #F7F8DE;
    text-decoration: none;
 }
-a:hover {
+.link:hover {
     text-decoration: underline;
     color: #C2C5B7;
+    cursor: pointer;
 }
-img {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+#game-div {
+   width: 50%;
+   background-color: red;
 }
-#logo {
-	padding-top: 8em;
+#info {
+   width: 50%;
+   padding-top: 3em;
+   text-align: center;
 }
 #links{
    position: relative;
@@ -36,16 +68,6 @@ img {
    width: 50%;
    margin: 0 auto;
 }
-.container-3{
-   float: left;
-   width: 33%;
-}
-.home-link-left{
-   text-align: left;
-}
-.home-link-centre{
-   text-align: center;
-}
-.home-link-right{
-   text-align: right;
+#logo {
+	padding-top: 3em;
 }
