@@ -5,7 +5,7 @@ body {
    height: 100%;
    background: #39B54A;
 }
-div, img {
+img {
    display: block;
    margin-left: auto;
    margin-right: auto;
@@ -22,9 +22,35 @@ p {
    font-size: 1.3em;
    color: #F7F8DE;
 }
-.container-4{
-   float: left;
+ul {
+   padding: 0;
+   margin: 0 auto;
+}
+li {
+   display: inline;
+   padding: 1em;
+}
+.arrow-div {
    width: 25%;
+   padding-top: 2em;
+   visibility: hidden;
+}
+.arrow-img-left {
+   float: right;
+   padding: 2em;
+   -moz-transform: scaleX(-1);
+   -o-transform: scaleX(-1);
+   -webkit-transform: scaleX(-1);
+   transform: scaleX(-1);
+   filter: FlipH;
+   -ms-filter: "FlipH";
+}
+.arrow-img-right {
+   float: left;
+   padding: 2em;
+}
+.container-3 {
+   float: left;
 }
 .email{
    font-weight: bold;
@@ -33,14 +59,12 @@ p {
 .email:hover{
    color: #7A7C79;
 }
-.home-link-centre{
-   text-align: center;
+.inner-div {
+   width: 70%;
+   margin: 0 auto;
 }
-.home-link-left{
-   text-align: left;
-}
-.home-link-right{
-   text-align: right;
+.outer-div {
+   width: 100%;
 }
 .link {
 	font-family: 'Open Sans', sans-serif;
@@ -53,18 +77,21 @@ p {
     color: #C2C5B7;
     cursor: pointer;
 }
+.slider {
+   visibility: hidden;
+}
 #game-div {
    width: 50%;
    background-color: red;
 }
 #info {
    width: 50%;
-   padding-top: 3em;
+   padding-top: 2em;
    text-align: center;
 }
 #links{
-   position: relative;
-   /*z-index:8;*/
+   display: flex;
+   justify-content: space-between;
    width: 50%;
    margin: 0 auto;
 }

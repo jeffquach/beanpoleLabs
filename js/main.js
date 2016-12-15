@@ -4,6 +4,8 @@ window.onload = function(){
 	links.style.width = title.offsetWidth + "px";
 
 	var infoDiv = document.getElementById('info');
+	var arrows = document.getElementsByClassName('arrow-div');
+	var icon = document.getElementsByClassName('slider');
 	var currentLinkIndex;
 	var currentHTMLNode;
 	document.getElementById('games').addEventListener("click", games);
@@ -11,6 +13,8 @@ window.onload = function(){
 	document.getElementById('contact').addEventListener("click", contact);
 
 	function games(){
+		toggleArrows(true);
+		toggleIcon(true);
 		console.log("TINGZ");
 	}
 
@@ -30,6 +34,18 @@ window.onload = function(){
 			infoDiv.appendChild(pTag);
 			currentLinkIndex = index;
 			currentHTMLNode = pTag;
+		}
+	}
+
+	function toggleArrows(state){
+		for(var i = 0; i < arrows.length; i++){
+			arrows[i].style.visibility = state ? "visible" : "hidden";
+		}
+	}
+
+	function toggleIcon(state){
+		for(var i = 0; i < icon.length; i++){
+			icon[i].style.visibility = state ? "visible" : "hidden";
 		}
 	}
 }
