@@ -17,6 +17,13 @@ h1 {
    text-align: center;
    margin: 0em 0.5em 0.3em 0.5em;
 }
+h2 {
+   font-family: 'Carter One', cursive;
+   font-size: 2.5em;
+   color: #F7F8DE;
+   text-decoration: underline;
+   margin: 0;
+}
 p {
    font-family: 'Open Sans', sans-serif;
    font-size: 1.3em;
@@ -26,30 +33,20 @@ ul {
    padding: 0;
    margin: 0 auto;
 }
-li {
-   display: inline;
-   padding: 1em;
-}
 .arrow-div {
-   width: 25%;
+   width: 15%;
    padding-top: 2em;
    visibility: hidden;
 }
-.arrow-img-left {
-   float: right;
-   padding: 2em;
-   -moz-transform: scaleX(-1);
-   -o-transform: scaleX(-1);
-   -webkit-transform: scaleX(-1);
-   transform: scaleX(-1);
-   filter: FlipH;
-   -ms-filter: "FlipH";
-}
-.arrow-img-right {
-   float: left;
-   padding: 2em;
+.arrow-div:hover {
+   color: black;
 }
 .container-3 {
+   width: 33%;
+   float: left;
+}
+.container-6 {
+   width: 66%;
    float: left;
 }
 .email{
@@ -59,12 +56,20 @@ li {
 .email:hover{
    color: #7A7C79;
 }
+.float-left {
+   float: left;
+}
+.hidden {
+   display: none;
+}
+.icon {
+   max-width: 130px;
+   max-height: 130px;
+}
 .inner-div {
    width: 70%;
    margin: 0 auto;
-}
-.outer-div {
-   width: 100%;
+   overflow: auto;
 }
 .link {
 	font-family: 'Open Sans', sans-serif;
@@ -77,23 +82,69 @@ li {
     color: #C2C5B7;
     cursor: pointer;
 }
+.outer-div {
+   width: 100%;
+}
+.paragraph {
+   float: left;
+   text-align: left;
+   margin: 0;
+}
 .slider {
    visibility: hidden;
+}
+.slider-panel {
+   overflow: auto;
+}
+.title {
+   float: left;
+}
+#arrow-img-left {
+   float: right;
+   padding: 2em;
+   -moz-transform: scaleX(-1);
+   -o-transform: scaleX(-1);
+   -webkit-transform: scaleX(-1);
+   transform: scaleX(-1);
+   filter: FlipH;
+   -ms-filter: "FlipH";
+}
+#arrow-img-right {
+   float: left;
+   padding: 2em;
 }
 #game-div {
    width: 50%;
    background-color: red;
 }
 #info {
-   width: 50%;
+   width: 70%;
    padding-top: 2em;
    text-align: center;
+   overflow: hidden;
+   height: 150px;
 }
-#links{
+#info ul {
+   list-style: none;
+   overflow: hidden;
+   height: 150px;
+}
+#info li {
+   width: 100%;
+   display: inline;
+}
+#info span {
+   overflow: auto;
+}
+#links {
    display: flex;
    justify-content: space-between;
    width: 50%;
    margin: 0 auto;
+}
+#links li {
+   display: inline;
+   padding: 1em;
 }
 #logo {
 	padding-top: 3em;

@@ -1,21 +1,25 @@
 window.onload = function(){
 	var links = document.getElementById("links");
 	var title = document.getElementById("title");
-	links.style.width = title.offsetWidth + "px";
-
 	var infoDiv = document.getElementById('info');
 	var arrows = document.getElementsByClassName('arrow-div');
 	var icon = document.getElementsByClassName('slider');
-	var currentLinkIndex;
-	var currentHTMLNode;
-	document.getElementById('games').addEventListener("click", games);
-	document.getElementById('about').addEventListener("click", about);
-	document.getElementById('contact').addEventListener("click", contact);
+	var gamePanels = document.getElementById('info').children;
+	var gamePanelIndex = 0;
+	var leftArrow = document.getElementById('arrow-img-left');
+	var rightArrow = document.getElementById('arrow-img-right');
+	var currentLinkIndex, currentHTMLNode;
+
+	document.getElementById("games").addEventListener("click", games);
+	document.getElementById("about").addEventListener("click", about);
+	document.getElementById("contact").addEventListener("click", contact);
+	document.getElementById("arrow-img-right").addEventListener("click", right_arrow);
+	links.style.width = title.offsetWidth + "px";
 
 	function games(){
 		toggleArrows(true);
 		toggleIcon(true);
-		console.log("TINGZ");
+		gamePanels[gamePanelIndex].className = "slider-panel";
 	}
 
 	function about(){
@@ -24,6 +28,16 @@ window.onload = function(){
 
 	function contact(){
 		info(2, 'For any inquiries please contact: <a href="mailto:beanpolelabs@gmail.com" class="email">beanpolelabs@gmail.com</a>');
+	}
+
+	function right_arrow(){
+		gamePanels[gamePanelIndex].className = "hidden";
+		if(gamePanelIndex === 1){
+			gamePanelIndex = 0;
+		}else{
+			gamePanelIndex++;
+		}
+		gamePanels[gamePanelIndex].className = "";
 	}
 
 	function info(index, msg){
