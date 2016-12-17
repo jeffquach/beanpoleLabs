@@ -7,7 +7,7 @@
 		<script src="js/main.js"></script>
 	</head>
 	<body>
-		<img id="logo" src="images/logo.png" alt="logo" />
+		<img id="logo" class="img-center" src="images/logo.png" alt="logo" />
 		<h1>
 			<span id="title">Beanpole Labs</span>
 		</h1>
@@ -27,38 +27,63 @@
 				</li>
 			</ul>
 		</div>
-		<div class="outer-div">
+		<div class="container-10">
 			<div class="inner-div">
-				<div class="float-left arrow-div">
-					<input type="image" src="images/arrow.png" id="arrow-img-left">
-				</div>
-				<div id="info" class="float-left" >
-					<div class="hidden">
-						<span class="container-3">
-							<img src="images/bucketsIcon.png" alt="Buckets Icon" class="slider icon">
-						</span>
-						<span class="container-6">
-							<h2 class="float-left">Buckets</h2>
-							<p class="paragraph">
-								Some randomness dawgz! Some randomness dawgz! Some randomness dawgz!
-							</p>
-						</span>
-					</div>
-					<div class="hidden">
-						<span class="container-3">
-							<img src="images/bucketsIcon.png" alt="Buckets Icon" class="slider icon">
-						</span>
-						<span class="container-6">
-							<h2 class="float-left">Buckets</h2>
-							<p class="paragraph">
-								TINGZ 2 dawg!
-							</p>
-						</span>
-					</div>
-				</div>
-				<div class="float-left arrow-div">
-					<input type="image" src="images/arrow.png" id="arrow-img-right">
-				</div>
+				<ul>
+					<li id="games-info" class="container-10 hidden">
+						<div class="float-left arrow-div fadeIn">
+							<input type="image" src="images/arrow.png" id="arrow-img-left">
+						</div>
+						<div id="info" class="float-left" >
+							<div class="slider-panel fadeIn">
+								<span class="container-3">
+									<img src="images/bucketsIcon.png" alt="Buckets Icon" class="icon img-center">
+								</span>
+								<span class="container-6">
+									<h2 class="float-left">Buckets</h2>
+									<p class="paragraph">
+										An addictive puzzle game, simple to play, but hard to master!
+									</p>
+									<div class="container-8">
+										<div class="container-5">
+											<a href="#"><img src="images/appleAppIcon.png" alt="iOS App Store"></a>
+										</div>
+										<div class="container-5">
+											<a href="#"><img src="images/googleAppIcon.png" alt="Google Play Store"></a>
+										</div>
+									</div>
+								</span>
+							</div>
+							<div class="hidden">
+								<span class="container-3">
+									<img src="images/blockFarmIcon.png" alt="Block Farm Icon" class="icon img-center">
+								</span>
+								<span class="container-6">
+									<h2 class="float-left">Block Farm</h2>
+									<p class="paragraph">
+										A challenging puzzle game testing your wit and problem-solving abilities!
+									</p>
+									<div class="container-8">
+										<div class="container-5">
+											<a href="#"><img src="images/appleAppIcon.png" alt="iOS App Store"></a>
+										</div>
+										<div class="container-5">
+											<a href="#"><img src="images/googleAppIcon.png" alt="Google Play Store"></a>
+										</div>
+									</div>
+								</span>
+							</div>
+						</div>
+						<div class="float-left arrow-div fadeIn">
+							<input type="image" src="images/arrow.png" id="arrow-img-right">
+						</div>
+					</li>
+					<li id="about-info" class="container-10 hidden">
+						<p class="container-5-alt centre fadeIn">
+							For any inquiries please contact: <a href="mailto:beanpolelabs@gmail.com" class="email">beanpolelabs@gmail.com</a>
+						</p>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</body>

@@ -9,25 +9,50 @@ window.onload = function(){
 	var leftArrow = document.getElementById('arrow-img-left');
 	var rightArrow = document.getElementById('arrow-img-right');
 	var currentLinkIndex, currentHTMLNode;
+	var gamesInfo = document.getElementById("games-info");
+	var aboutInfo = document.getElementById("about-info");
 
 	document.getElementById("games").addEventListener("click", games);
 	document.getElementById("about").addEventListener("click", about);
 	document.getElementById("contact").addEventListener("click", contact);
+	document.getElementById("arrow-img-left").addEventListener("click", left_arrow);
 	document.getElementById("arrow-img-right").addEventListener("click", right_arrow);
 	links.style.width = title.offsetWidth + "px";
 
 	function games(){
-		toggleArrows(true);
-		toggleIcon(true);
-		gamePanels[gamePanelIndex].className = "slider-panel";
+		console.log(gamesInfo.className === "container-10 hidden");
+		if(gamesInfo.className === "container-10 hidden"){
+			gamesInfo.className = "container-10";
+		}else{
+			gamesInfo.className = "container-10 hidden";
+		}
+		// gamesInfo.className = "container-10 fadeIn";
+		// toggleArrows(true);
+		// toggleIcon(true);
+		// gamePanels[gamePanelIndex].className = "slider-panel fadeIn";
 	}
 
 	function about(){
-		info(1, "Beanpole Labs is the brain child of Jeffrey Quach.  If you like puzzle games check out Buckets: A Puzzle Journey and Block Farm!");
+		if(aboutInfo.className === "container-10 hidden"){
+			aboutInfo.className = "container-10";
+		}else{
+			aboutInfo.className = "container-10 hidden";
+		}	
+		//info(1, "Beanpole Labs is the brain child of Jeffrey Quach.  If you like puzzle games check out Buckets: A Puzzle Journey and Block Farm!");
 	}
 
 	function contact(){
 		info(2, 'For any inquiries please contact: <a href="mailto:beanpolelabs@gmail.com" class="email">beanpolelabs@gmail.com</a>');
+	}
+
+	function left_arrow(){
+		gamePanels[gamePanelIndex].className = "hidden";
+		if(gamePanelIndex === 0){
+			gamePanelIndex = 1;
+		}else{
+			gamePanelIndex--;
+		}
+		gamePanels[gamePanelIndex].className = "slider-panel fadeIn";
 	}
 
 	function right_arrow(){
@@ -37,7 +62,7 @@ window.onload = function(){
 		}else{
 			gamePanelIndex++;
 		}
-		gamePanels[gamePanelIndex].className = "";
+		gamePanels[gamePanelIndex].className = "slider-panel fadeIn";
 	}
 
 	function info(index, msg){
@@ -53,7 +78,7 @@ window.onload = function(){
 
 	function toggleArrows(state){
 		for(var i = 0; i < arrows.length; i++){
-			arrows[i].style.visibility = state ? "visible" : "hidden";
+			arrows[i].className = "float-left arrow-div fadeIn";
 		}
 	}
 
