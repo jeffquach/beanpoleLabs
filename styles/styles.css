@@ -68,7 +68,7 @@ ul {
    width: 100%;
    overflow: auto;
 }
-.email{
+.clickable-link {
    font-weight: bold;
    color: #C2C5B7;
 }
@@ -207,4 +207,12 @@ ul {
     to {
         opacity: 1;
     }
+}
+@media screen and (max-width: 1300px) {
+  #info {
+    width: 70%;
+  }
+  .arrow-div {
+    width: 15%;
+  }
 }

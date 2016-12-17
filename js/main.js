@@ -11,6 +11,7 @@ window.onload = function(){
 	var currentLinkIndex, currentHTMLNode;
 	var gamesInfo = document.getElementById("games-info");
 	var aboutInfo = document.getElementById("about-info");
+	var contactInfo = document.getElementById("contact-info");
 
 	document.getElementById("games").addEventListener("click", games);
 	document.getElementById("about").addEventListener("click", about);
@@ -20,29 +21,25 @@ window.onload = function(){
 	links.style.width = title.offsetWidth + "px";
 
 	function games(){
-		console.log(gamesInfo.className === "container-10 hidden");
-		if(gamesInfo.className === "container-10 hidden"){
-			gamesInfo.className = "container-10";
-		}else{
-			gamesInfo.className = "container-10 hidden";
-		}
-		// gamesInfo.className = "container-10 fadeIn";
-		// toggleArrows(true);
-		// toggleIcon(true);
-		// gamePanels[gamePanelIndex].className = "slider-panel fadeIn";
+		onElementClick(gamesInfo);
 	}
 
 	function about(){
-		if(aboutInfo.className === "container-10 hidden"){
-			aboutInfo.className = "container-10";
-		}else{
-			aboutInfo.className = "container-10 hidden";
-		}	
-		//info(1, "Beanpole Labs is the brain child of Jeffrey Quach.  If you like puzzle games check out Buckets: A Puzzle Journey and Block Farm!");
+		onElementClick(aboutInfo);
 	}
 
 	function contact(){
-		info(2, 'For any inquiries please contact: <a href="mailto:beanpolelabs@gmail.com" class="email">beanpolelabs@gmail.com</a>');
+		onElementClick(contactInfo);
+	}
+
+	function onElementClick(node){
+		if(node.className === "container-10 hidden"){
+			if(currentHTMLNode) currentHTMLNode.className = "container-10 hidden";
+			node.className = "container-10";
+			currentHTMLNode = node
+		}else{
+			node.className = "container-10 hidden";
+		}
 	}
 
 	function left_arrow(){
@@ -63,17 +60,6 @@ window.onload = function(){
 			gamePanelIndex++;
 		}
 		gamePanels[gamePanelIndex].className = "slider-panel fadeIn";
-	}
-
-	function info(index, msg){
-		if(currentLinkIndex != index){
-			if(currentHTMLNode) infoDiv.removeChild(currentHTMLNode);
-			var pTag = document.createElement('p');
-			pTag.innerHTML = msg;
-			infoDiv.appendChild(pTag);
-			currentLinkIndex = index;
-			currentHTMLNode = pTag;
-		}
 	}
 
 	function toggleArrows(state){
