@@ -41,6 +41,10 @@ p {
   text-align: center;
   padding-top: 2em;
 }
+.centre-left-align {
+  margin: auto;
+  padding-top: 2em;
+}
 .container-3 {
   width: 33%;
   float: left;
@@ -133,6 +137,13 @@ p {
     color: #C2C5B7;
     cursor: pointer;
 }
+.main-title {
+  font-family: 'Baloo Bhai', cursive;
+  font-size: 3.8em;
+  color: #F7F8DE;
+  text-decoration: underline;
+  margin: 0;
+}
 .menu-list {
   list-style: none;
   padding: 0;
@@ -150,6 +161,13 @@ p {
   font-family: 'Baloo Bhai', cursive;
   font-size: 1.8em;
   color: #616366;
+  text-decoration: underline;
+  margin: 0;
+}
+.sub-title-light {
+  font-family: 'Baloo Bhai', cursive;
+  font-size: 1.8em;
+  color: #F7F8DE;
   text-decoration: underline;
   margin: 0;
 }
