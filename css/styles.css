@@ -45,6 +45,20 @@ p {
   margin: auto;
   padding-top: 2em;
 }
+.clickable-link {
+  font-weight: bold;
+  color: #C2C5B7;
+}
+.clickable-link:hover {
+  color: #C3C5C7;
+}
+.clickable-link-light {
+  font-weight: bold;
+  color: #C3C5C7;
+}
+.clickable-link-light:hover {
+  color: #919496;
+}
 .container-3 {
   width: 33%;
   float: left;
@@ -77,17 +91,6 @@ p {
 }
 .container-padding {
   padding: 3em;
-}
-.clickable-link {
-  font-weight: bold;
-  color: #C2C5B7;
-}
-.clickable-link-light {
-  font-weight: bold;
-  color: #C3C5C7;
-}
-.clickable-link-light:hover {
-  color: #919496;
 }
 .email:hover{
   color: #7A7C79;
