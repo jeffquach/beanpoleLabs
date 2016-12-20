@@ -31,7 +31,7 @@ p {
   color: black;
 }
 .background-buckets {
-  background: #F9F9F9;
+  background: #48484A;
 }
 .background-index {
   background: #39B54A;
@@ -82,6 +82,13 @@ p {
   font-weight: bold;
   color: #C2C5B7;
 }
+.clickable-link-light {
+  font-weight: bold;
+  color: #C3C5C7;
+}
+.clickable-link-light:hover {
+  color: #919496;
+}
 .email:hover{
   color: #7A7C79;
 }
@@ -91,51 +98,55 @@ p {
 .fact {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.2em;
-  color: #616366;
+  color: #F9F9F9;
 }
 .fadeIn {
-   animation: fadein 2s;
-   -moz-animation: fadein 2s; /* Firefox */
-   -webkit-animation: fadein 2s; /* Safari and Chrome */
-   -o-animation: fadein 2s; /* Opera */
+  animation: fadein 2s;
+  -moz-animation: fadein 2s; /* Firefox */
+  -webkit-animation: fadein 2s; /* Safari and Chrome */
+  -o-animation: fadein 2s; /* Opera */
 }
 .float-left {
-   float: left;
+  float: left;
 }
 .hidden {
-   display: none;
+  display: none;
 }
 .icon {
-   max-width: 130px;
-   max-height: 130px;
+  max-width: 130px;
+  max-height: 130px;
+}
+.icon-left-shift {
+  display: block;
+  padding-left: 3em;
 }
 .img-center {
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .img-resize {
   width: 90%;
   height: 90%;
 }
 .inner-div {
-   width: 70%;
-   margin: 0 auto;
-   overflow: auto;
+  width: 70%;
+  margin: 0 auto;
+  overflow: auto;
 }
 .left-padding {
   padding-left: 1em;
 }
 .link {
-	font-family: 'Open Sans', sans-serif;
-   font-size: 1.8em;
-	color: #F7F8DE;
-   text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.8em;
+  color: #F7F8DE;
+  text-decoration: none;
 }
 .link:hover {
-    text-decoration: underline;
-    color: #C2C5B7;
-    cursor: pointer;
+  text-decoration: underline;
+  color: #C2C5B7;
+  cursor: pointer;
 }
 .main-title {
   font-family: 'Baloo Bhai', cursive;
@@ -168,6 +179,13 @@ p {
   font-family: 'Baloo Bhai', cursive;
   font-size: 1.8em;
   color: #F7F8DE;
+  text-decoration: underline;
+  margin: 0;
+}
+.sub-title-white {
+  font-family: 'Baloo Bhai', cursive;
+  font-size: 1.8em;
+  color: #F9F9F9;
   text-decoration: underline;
   margin: 0;
 }
